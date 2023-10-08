@@ -31,15 +31,18 @@
                         <x-text-input id="password_confirmation" class="block mt-1 w-full border-none bg-blue-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="password" name="password_confirmation" required autocomplete="new-password" />
                         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                     </div>
-                </form>
+                
                
                 <div class="flex items-center justify-end flex-col mt-4">
-                    <button type="submit" class="rounded-3xl bg-blue-900 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-blue-600">Register</button>
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-2" href="{{ route('login') }}">
-                        {{ __('Already registered?') }}
-                    </a>
+                <x-primary-button class="ml-4">
+                {{ __('Register') }}
+            </x-primary-button>
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
                 </div>
             </div>
         </div>
     </div>
+    </form>
 </x-guest-layout>
