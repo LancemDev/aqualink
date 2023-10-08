@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div class="flex h-screen w-full items-center justify-center bg-white">
         <div class="rounded-xl bg-white-300 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
-            <div class="text-white">
+            <div class="text-blue">
                 <div class="mb-8 flex flex-col items-center">
                     <img src="{{asset('images/logo-no-background.png')}}" width="150" alt="" srcset="" />
                     <span class="text-lg text-blue-900">Sign Up</span>
