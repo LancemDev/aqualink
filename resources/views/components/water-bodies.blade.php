@@ -71,6 +71,51 @@
 
         <!-- End of Navbar -->
 
+        <div class="bottom-data">
+                <div class="activity">
+                    <div class="header">
+                        <i class='bx bx-receipt'></i>
+                        <h3>Water Bodies</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Water Body</th>
+                                <th>Temperature</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="{{ asset('images/lake1.jpeg') }}">
+                                    <p>Lake Naivasha</p>
+                                </td>
+                                <td>{{ $temperature ?? '88'}}</td>
+                                <td><span class="status safe">Safe</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{{ asset('images/lake2.jpeg') }}">
+                                    <p>Indian Ocean</p>
+                                </td>
+                                <td>{{ $humidity ?? '77'}}</td>
+                                <td><span class="status critical">Critical</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{{ asset('images/lake1.jpeg') }}">
+                                    <p>River Ewaso Nyiro</p>
+                                </td>
+                                <td>{{ $pH ?? '93'}}</td>
+                                <td><span class="status danger">Danger</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 
 
         </main>

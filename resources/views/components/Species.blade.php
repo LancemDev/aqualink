@@ -15,35 +15,23 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-    <a href="{{ route('dashboard') }}" class="logo">
+        <a href="{{ asset('images/logo.png') }}" class="logo">
             <i class='bx bx-code-alt'></i>
             <div class="logo-name"><span>Aqua</span>link</div>
         </a>
         <ul class="side-menu">
-            <li class="active"><a href="{{ route('dashboard.view') }}"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li ><a href="#"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
             <li><a href="{{ route('welcome') }}"><i class='bx bx-message-square-dots'></i>Homepage</a></li>
-            <li><a href="{{ route('water-bodies.view') }}"><i class='bx bx-water'></i>Water Bodies</a></li>
             <li ><a href="{{ route('maps.view') }}"><i class='bx bx-map'></i>Map</a></li>
-            <li ><a href="{{ route('species.view') }}"><i class='bx bx-map'></i>Species</a></li>
+            <li class="active"><a href="{{ route('species.view') }}"><i class='bx bx-map'></i>Species</a></li>
             <li><a href="{{ route('settings.view') }}"><i class='bx bx-cog'></i>Settings</a></li>
         </ul>
         <ul class="side-menu">
             <li>
-            <li>
-    <a href="#" class="logout" id="logout-link">
-        <i class='bx bx-log-out-circle'></i>
-        Logout
-    </a>
-</li>
-
-<script>
-    document.getElementById('logout-link').addEventListener('click', function(e) {
-        e.preventDefault();
-       
-        window.location.href = '/welcome'; 
-    });
-</script>
-
+                <a href="{{ route('logout') }}" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
             </li>
         </ul>
     </div>
@@ -75,83 +63,61 @@
         <main>
             <div class="header">
                 <div class="left">
-                    <h1>Hello {{auth()->user()->name }}!</h1>
+                    
                     <ul class="breadcrumb">
-                        <li><a href="/">
+                        <li><a href="#">
                                 Homepage
                             </a></li>
                         /
-                        <li><a href="#" class="active">Dashboard</a></li>
+                        <li><a href="#" class="active">Species</a></li>
                     </ul>
                 </div>
-               
+                <a href="#" class="report" input type="image">
+                    <i class='bx bx-cloud-download'></i>
+                    <span>Upload Picture</span>
+                </a>
             </div>
-
-            <!-- Insights -->
-            <ul class="insights">
-                
-                <li>
-                    <img src="{{ ('images/fun.png') }}" alt="h3" width="300" height="170">
-                    <span class="info">
-                        <h3>
-                            Fun Facts
-                        </h3>
-                        <p>Safe Recreation?</p>
-                        <td><span class="Learn More"><a href="Funfact.html">Learn More</a> </span></td>
-                    </span>
-                </li>
-                <li>
-                    <img src="{{ asset('images/quiz2.png') }}" alt="h3" width="300" height="170">
-                    <span class="info">
-                        <h3>
-                            Quiz
-                        </h3>
-                        <p>So you think you know?</p>
-                        <td><span class="Learn More"><a href="{{ route('quiz.index') }}">Learn More</a> </span></td>
-                    </span>
-                </li>
-            </ul>
 
             <div class="bottom-data">
                 <div class="activity">
                     <div class="header">
                         <i class='bx bx-receipt'></i>
-                        <h3>Water Bodies</h3>
+                        <h3>Endangered Species</h3>
                         <i class='bx bx-filter'></i>
                         <i class='bx bx-search'></i>
                     </div>
                     <table>
                         <thead>
                             <tr>
-                                <th>Water Body</th>
-                                <th>Temperature</th>
-                                <th>Status</th>
+                                <th>Organism</th>
+                                <th>Life Form</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    <img src="{{ asset('images/lake1.jpeg') }}">
-                                    <p>Lake Naivasha</p>
+                                    <img src="{{ asset('images/Dolphin.jpeg') }}">
+                                    <p>Hunchback Dolphin</p>
                                 </td>
-                                <td>{{ $temperature ?? '88'}}</td>
-                                <td><span class="status safe">Safe</span></td>
+                                <td>Bacteria</td>
+                                
                             </tr>
                             <tr>
                                 <td>
-                                    <img src="{{ asset('images/lake2.jpeg') }}">
-                                    <p>Indian Ocean</p>
+                                    <img src="{{ asset('images/fish1.jpeg') }}">
+                                    <p>Octopus</p>
                                 </td>
-                                <td>{{ $humidity ?? '77'}}</td>
-                                <td><span class="status critical">Critical</span></td>
+                                <td>TBD</td>
+                                
                             </tr>
                             <tr>
                                 <td>
-                                    <img src="{{ asset('images/lake1.jpeg') }}">
-                                    <p>River Ewaso Nyiro</p>
+                                    <img src="{{ asset('images/fish2.jpeg') }}">
+                                    <p>Fish</p>
                                 </td>
-                                <td>{{ $pH ?? '93'}}</td>
-                                <td><span class="status danger">Danger</span></td>
+                                <td>TBD</td>
+                                
                             </tr>
                         </tbody>
                     </table>
@@ -161,37 +127,46 @@
                 <div class="reminders">
                     <div class="header">
                         <i class='bx bx-note'></i>
-                        <h3>Notifications</h3>
+                        <h3>Conservational Efforts</h3>
                         <i class='bx bx-filter'></i>
                         <i class='bx bx-plus'></i>
                     </div>
                     <ul class="task-list">
-                        <li class="safe">
+                        <li class="completed">
                             <div class="task-title">
                                 <i class='bx bx-check-circle'></i>
-                                <p>Read on Endangered Species</p>
+                                <p>
+                                  Discover how you can make a difference in your community. Learn about water conservation practices and protecting endangered aquatic species in our app today!
+                                     <i>Save Our Rivers and Lakes!</i>
+                                </p>
                             </div>
                             <i class='bx bx-dots-vertical-rounded'></i>
                         </li>
-                        <li class="safe">
+                        <li class="completed">
                             <div class="task-title">
                                 <i class='bx bx-check-circle'></i>
-                                <p>Read on conservation efforts</p>
+                                <p>
+                                Help preserve local water bodies. Find tips on reducing water usage and preventing pollution in our app's latest articles.
+                                     <i>Protect Aquatic Wildlife! 🐟</i>
+                                </p>
                             </div>
                             <i class='bx bx-dots-vertical-rounded'></i>
                         </li>
-                        <li class="safe">
+                        <li class="not-completed">
                             <div class="task-title">
                                 <i class='bx bx-x-circle'></i>
-                                <p>Fun Facts</p>
+                                <p>
+                                Aquatic species need your help. Explore how you can safeguard their habitats and promote biodiversity in your area using our app.
+                                     <i>Join the Clean Water Movement! 🚰</i>
+                                </p>
                             </div>
                             <i class='bx bx-dots-vertical-rounded'></i>
                         </li>
                     </ul>
                 </div>
-
                 
-
+                </div>
+          
         </main>
 
     </div>
