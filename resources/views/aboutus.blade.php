@@ -20,7 +20,7 @@
         </div>
         <div class="flex flex-row items-center space-x-4 md:space-x-8">
             <span class="text-lg font-bold  text-gray-600 px-2">
-                <a href='/'>Home</a>
+                <a href="{{ url('/') }}">Home</a>
             </span>
             <span class="text-lg font-bold px-2">
                 <a href='aboutus'>About Us</a>
@@ -97,7 +97,7 @@
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
     <li>
-            <a href="/" class="mr-4 hover:underline md:mr-6 ">Home</a>
+            <a href="{{ url('/') }}" class="mr-4 hover:underline md:mr-6 ">Home</a>
         </li>
         <li>
             <a href="aboutus" class="mr-4 hover:underline md:mr-6 ">About Us</a>

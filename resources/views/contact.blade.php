@@ -33,7 +33,7 @@
     @if (Route::has('login'))
         <div class="flex flex-row mt-4 md:mt-0 w-full md:w-1/5 items-center justify-around">
             @auth
-                <a href="{{ url('/dashboard') }}" class="font-semibold text-black-600 hover:text-black-900 dark:text-black-400 dark:hover:text-gray focus:outline focus:outline-2 focus:rounded-sm focus:outline-gray-500">Dashboard</a>
+                <a href="{{ url('/home') }}" class="font-semibold text-black-600 hover:text-black-900 dark:text-black-400 dark:hover:text-gray focus:outline focus:outline-2 focus:rounded-sm focus:outline-gray-500">Dashboard</a>
             @else
                 <a href="{{ route('login') }}" class="font-semibold text-black-600 hover:text-black-900 dark:text-black-400 dark:hover:text-gray focus:outline focus:outline-2 focus:rounded-sm focus:outline-gray-500">Log in</a>
 
@@ -98,7 +98,7 @@
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
     <li>
-            <a href="/" class="mr-4 hover:underline md:mr-6 ">Home</a>
+            <a href="{{ url('/') }}" class="mr-4 hover:underline md:mr-6 ">Home</a>
         </li>
         <li>
             <a href="aboutus" class="mr-4 hover:underline md:mr-6 ">About Us</a>

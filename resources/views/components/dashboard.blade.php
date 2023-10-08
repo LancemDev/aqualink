@@ -21,7 +21,7 @@
         </a>
         <ul class="side-menu">
             <li class="active"><a href="#"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
-            <li><a href="{{ route('welcome') }}"><i class='bx bx-message-square-dots'></i>Homepage</a></li>
+            <li><a href="{{ route('welcome.view') }}"><i class='bx bx-message-square-dots'></i>Homepage</a></li>
             <li><a href="{{ route('water-bodies.view') }}"><i class='bx bx-water'></i>Water Bodies</a></li>
             <li ><a href="{{ route('maps.view') }}"><i class='bx bx-map'></i>Map</a></li>
             <li ><a href="{{ route('species.view') }}"><i class='bx bx-map'></i>Species</a></li>

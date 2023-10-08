@@ -37,7 +37,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
     Route::get('/quiz', [QuizController::class, 'index'])->name('quiz.index');
     Route::post('/quiz/submit', [QuizController::class, 'submit'])->name('quiz.submit');
 
@@ -62,16 +61,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard.view', function () {
         return view('dashboard');
     })->name('dashboard.view');
-    Route::get('/dashboard.view', 'App\Http\Controllers\SensorController@index')->name('dashboard.view');
-
-    // Load the notifications from the db when getting to dashboard
-    Route::get('/dashboard', 'App\Http\Controllers\NotificationController@index')->name('dashboard');
-    Route::get('/', 'App\Http\Controllers\SensorController@index')->name('/');
-
-    //Route to the welcome landing page
-    Route::get('/welcome', function () {
+    Route::get('/welcome.view', function () {
         return view('welcome');
-    })->name('welcome');
+    })->name('welcome.view');
+
 
 });
 
