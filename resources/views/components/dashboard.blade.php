@@ -20,7 +20,7 @@
             <div class="logo-name"><span>Aqua</span>link</div>
         </a>
         <ul class="side-menu">
-            <li class="active"><a href="#"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li class="active"><a href="{{ route('dashboard.view') }}"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
             <li><a href="{{ route('welcome') }}"><i class='bx bx-message-square-dots'></i>Homepage</a></li>
             <li><a href="{{ route('water-bodies.view') }}"><i class='bx bx-water'></i>Water Bodies</a></li>
             <li ><a href="{{ route('maps.view') }}"><i class='bx bx-map'></i>Map</a></li>
@@ -91,7 +91,7 @@
             <ul class="insights">
                 
                 <li>
-                    <img src="{{ ('images/lake1.jpeg') }}" alt="h3" width="300" height="170">
+                    <img src="{{ ('images/fun.png') }}" alt="h3" width="300" height="170">
                     <span class="info">
                         <h3>
                             Fun Facts
@@ -101,7 +101,7 @@
                     </span>
                 </li>
                 <li>
-                    <img src="{{ asset('images/lake1.jpeg') }}" alt="h3" width="300" height="170">
+                    <img src="{{ asset('images/quiz2.png') }}" alt="h3" width="300" height="170">
                     <span class="info">
                         <h3>
                             Quiz
